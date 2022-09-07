@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --card-orange: hsl(31, 77%, 52%);
+  --card-cyan: hsl(184, 100%, 22%);
+  --card-dark-cyan: hsl(179, 100%, 13%);
+  --par-white: hsla(0, 0%, 100%, 0.75);
+  --light-grey: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1000px) {
+  main {
+    align-items: center;
+  }
+}
+main .cards {
+  min-width: 20.625em;
+  max-width: 25em;
+  height: max-content;
+  margin: 1em;
+  border-radius: 0.7em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1000px) {
+  main .cards {
+    flex-direction: row;
+    max-width: 57.5em;
+  }
+}
+main .cards .card {
+  padding: 3em;
+  padding-bottom: 4em;
+}
+main .cards .card img {
+  margin-bottom: 1.75em;
+}
+main .cards .card h1 {
+  font-family: "Big Shoulders Display", cursive;
+  color: var(--light-grey);
+  text-transform: uppercase;
+  margin-bottom: 0.8em;
+  font-size: 2.5rem;
+}
+main .cards .card p {
+  color: var(--par-white);
+  line-height: 1.7rem;
+  margin-bottom: 2.625em;
+}
+@media (min-width: 1000px) {
+  main .cards .card p {
+    font-size: 15px;
+    margin-bottom: 6em;
+  }
+}
+main .cards .card a {
+  background: #fff;
+  color: var(--card-orange);
+  text-decoration: none;
+  padding: 1em 2em;
+  border-radius: 2em;
+  border: 2px solid #fff;
+  transition: 0.2s;
+}
+main .cards .card a:hover {
+  background: transparent;
+  color: #fff;
+}
+main .cards .card__sedans {
+  background: var(--card-orange);
+}
+main .cards .card__sedans a {
+  color: var(--card-orange);
+}
+main .cards .card__suvs {
+  background: var(--card-cyan);
+}
+main .cards .card__suvs a {
+  color: var(--card-cyan);
+}
+main .cards .card__luxury {
+  background: var(--card-dark-cyan);
+}
+main .cards .card__luxury a {
+  color: var(--card-dark-cyan);
+}

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  // Primary
+  --card-orange: hsl(31, 77%, 52%);
+  --card-cyan: hsl(184, 100%, 22%);
+  --card-dark-cyan: hsl(179, 100%, 13%);
+
+  // Neutral
+  --par-white: hsla(0, 0%, 100%, 0.75);
+  --light-grey: hsl(0, 0%, 95%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  @media (min-width: 1000px){
+    align-items: center;
+  }
+  .cards {
+    min-width: 20.625em;
+    max-width: 25em;
+    height: max-content;
+    margin: 1em;
+    border-radius: 0.7em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: 1000px) {
+      flex-direction: row;
+      max-width: 57.5em;
+    }
+    .card {
+      padding: 3em;
+      padding-bottom: 4em;
+      img {
+        margin-bottom: 1.75em;
+      }
+      h1 {
+        font-family: "Big Shoulders Display", cursive;
+        color: var(--light-grey);
+        text-transform: uppercase;
+        margin-bottom: 0.8em;
+        font-size: 2.5rem;
+      }
+      p {
+        color: var(--par-white);
+        line-height: 1.7rem;
+        margin-bottom: 2.625em;
+        @media (min-width: 1000px){
+            font-size: 15px;
+            margin-bottom: 6em;
+        }
+      }
+      a {
+        background: #fff;
+        color: var(--card-orange);
+        text-decoration: none;
+        padding: 1em 2em;
+        border-radius: 2em;
+        border: 2px solid #fff;
+        transition: 0.2s;
+        &:hover {
+          background: transparent;
+          color: #fff;
+        }
+      }
+    }
+    .card__sedans {
+      background: var(--card-orange);
+      a {
+        color: var(--card-orange);
+      }
+    }
+    .card__suvs {
+      background: var(--card-cyan);
+      a {
+        color: var(--card-cyan);
+      }
+    }
+    .card__luxury {
+      background: var(--card-dark-cyan);
+      a {
+        color: var(--card-dark-cyan);
+      }
+    }
+  }
+}
